@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  background-image: url("https://wallpaper.forfun.com/fetch/b7/b7a6cebcfec05535df22b2ab80e38121.jpeg");
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+header {
+  background-color: #f5ba13;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+header h2:hover{
+  color:black;
+}
+footer {
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p,h5{
+  color: #527a7a;
+}
+footer p:hover{
+  color:#339966;
+}
+
+/* For Displaying Notes */
+.note {
+  background-color: #eeecd8; 
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 260px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  color: #0088cc;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  font-family: serif;
+}
+.note p {
+  font-family:monospace;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #f5ba13;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* For Note Creation */
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background-color: #f2fff4;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  background-color: #f2fff4;
+}
+.publish-btn {
+  background: #ebe9e1;
+  color:dodgerblue;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(100, 88, 149, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+.publish-btn:hover{
+  color: blue;
+}
+.minimize-btn{
+  background-color: #ebe9e1;
+  color: darkorange;
+  border: none;
+  border-radius: 55%;
+  width: 34px;
+  height: 35px;
+  cursor: pointer;
+  outline: none;
+}
+.minimize-btn:hover{
+  color: crimson;
+}
+/* For Editing The Notes */
+form.editNoteForm{
+  position: relative;
+  width: 220px;
+  margin: 30px auto 20px auto;
+  background-color: #fcf9ef;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.editNoteForm input,
+form.editNoteForm textarea{
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.0em;
+  font-family: inherit;
+  resize: none;
+  background-color: #fcf9ef;
+  color:midnightblue;
+}
