@@ -11,9 +11,8 @@ function App(){
     //Note Cretaion
      function addNote(newNote){
         // console.log(newNote) Here newNote is an object sent from Input page
-
         async function postData(currentNoteItem){
-            const response = await axios.post('http://localhost:5000/api/notes',currentNoteItem)
+            const response = await axios.post('https://notesworthy-server.onrender.com/api/notes',currentNoteItem)
             alert(response.data.message)
             fetchNotes(); //It wiil fetch the data after data inserted into database
         }
@@ -33,7 +32,7 @@ function App(){
 
       const fetchNotes = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/api/notes');
+          const response = await axios.get('https://notesworthy-server.onrender.com/api/notes');
           setNotes(response.data);
         } catch (error) {
           console.error('Error fetching notes:', error);
@@ -42,7 +41,7 @@ function App(){
     
     //Delete Route
     function deleteNote(id){
-        let url="http://localhost:5000/api/notes/"+id
+        let url="https://notesworthy-server.onrender.com/api/notes/"+id
         async function removeNote(){
             const response = await axios.delete(url)
             alert(response.data.message)
@@ -52,24 +51,22 @@ function App(){
     }
 
     //Editing a Note
-    function editNote(id,updatedNote){
-        //For PUT Route
-        async function updatesNote(ID,myNote){
-            let uri="http://localhost:5000/api/notes/"+ID
-           await axios.put(uri,myNote)
-            fetchNotes()
-        }
+    function editNote(id,NoteData){
+        // //For PUT Route
+        // async function updatesNote(ID,myNote){
+        //     let uri="https://notesworthy-server.onrender.com/api/notes/"+ID
+        //    await axios.put(uri,myNote)
+        //     fetchNotes()
+        // }
+
         //For PATCH Route
-        async function updateNoteContent(ID,myNote){
-            let uri="http://localhost:5000/api/notes/"+ID
+        async function updateNote(ID,myNote){
+            let uri="https://notesworthy-server.onrender.com/api/notes/"+ID
             const resp = await axios.patch(uri,myNote)
-           alert(resp.data.message)
+            alert(resp.data.message)
             fetchNotes()
         }
-        //Condition to call PUT or PATCH Routes
-        if(updatedNote.title==="")
-        {updateNoteContent(id,updatedNote) }
-        else{ updatesNote(id,updatedNote) }  
+        updateNote(id,NoteData)  
     }
     return(
         <div>
